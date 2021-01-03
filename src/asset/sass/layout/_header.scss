@@ -1,2 +1,433 @@
+@charset "UTF-8";
+
 .l-header {
+  width: 100%;
+  height: 80px;
+  padding: 10px 3%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  box-shadow: 3px 3px #f7f7f7;
+
+  &__inner {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+
+  &__logo {
+    width: auto;
+    height: 25px;
+    
+    img {
+      width: auto;
+      height: 100%;
+    }
+  }
+}
+
+.c-button {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.p-hamburger {
+  width: 48px;
+  height: 48px;
+  transition: all 0.3s ease-in-out;
+
+  &_line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 5px;
+    margin: auto;
+    width: 20px;
+    height: 2px;
+    background-color: #00478b;
+    transition: inherit;
+    
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      height: 100%;
+      right: 0;
+      background-color: inherit;
+      content: "";
+      transition: inherit;
+    }
+    &::before {
+      width: 25px;
+      top: -8px;
+    }
+    &::after {
+      width: 15px;
+      top: 8px;
+    }
+  }
+
+  &[aria-expanded="true"] {
+    .p-hamburger_line {
+      left: 0;
+      background-color: transparent;
+
+      &::before,
+      &::after {
+      top: 0;
+      background-color: #fff;
+      }
+      &::before {
+        width: 20px;
+        transform: rotate(45deg);
+      }
+    
+      &::after {
+        width: 20px;
+        transform: rotate(-45deg);
+      }
+    }    
+  }
+}
+
+.u-visuallyHidden {
+  position: fixed;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.js-nav-cover {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  width: 100%;
+  height: 120%;
+  background-color: #222;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.52, 0, 0.5, 1.8);
+}
+
+.is-drawerActive {
+  .l-global_nav {
+    visibility: visible;
+    border-radius: 0;
+  }
+  overflow-y: hidden;
+}
+
+.l-global_nav {
+  &_item {
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  &_link {
+    padding: 0.2em 1em;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(155, 155, 155, 0.2);
+    }
+  }
+}
+
+.c-title {
+  margin-bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  font-size: 24px;
+
+  &:after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    background-color: #00478b;
+    border-radius: 1px;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+  }
+}
+
+
+
+// PC幅 (1001px)より大きい画面の場合
+@media screen and (min-width: 1001px) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+ 
+  .p-hamburger {
+    display: none;
+  }
+
+  .js-nav-cover {
+    display: none;
+  }
+
+  .l-global_nav {
+    &_box {
+      display: flex;
+      align-items: center;
+    }
+
+    &_item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  .c-title {
+    font-size: 24px;
+  }
+
+}
+// タブレット幅・スマホ幅 (1000px以下)画面の場合
+@media screen and (max-width: 1000px) {
+  .u-pc {
+    display: none !important;
+  }
+
+  .u-tab {
+    display: block;
+  }
+
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+
+  p {
+    font-size: 2vw;
+  }
+
+  a {
+    font-size: 2vw;
+  }
+
+  .l-content-wrap {
+    max-width: 100%;
+    padding-right: 3% !important;
+    padding-left: 3% !important;
+    box-sizing: border-box !important;
+
+    &-default {
+      max-width: 100%;
+      padding-right: 3% !important;
+      padding-left: 3% !important;
+      box-sizing: border-box !important;
+    }
+  }
+
+  .p-hamburger {
+    display: block;
+  }
+
+  .js-nav-cover {
+    display: block;
+  }
+
+  .l-global_nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 120%;
+    background: transparent;
+    transition: all 0.5s cubic-bezier(0.52, 0, 0.5, 1.8);
+    z-index: 9;
+  }
+
+  .is-hidden {
+    visibility: hidden;
+  }
+
+  .l-container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .l-global_nav {
+    &_item {
+      opacity: 0;
+    }
+
+    &_item:not(:last-child) {
+      margin-bottom: 1.6rem;
+    }
+
+    &_link {
+      color: #fff;
+    }
+  }
+
+  .c-title {
+    font-size: 3vw;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .u-sp {
+    display: block !important;
+  }
+
+  h1 {
+    font-size: 12vw;
+  }
+
+  h2 {
+    font-size: 8vw;
+  }
+
+  h3 {
+    font-size: 6vw;
+  }
+
+  p {
+    font-size: 4vw;
+  }
+
+  a {
+    font-size: 4vw;
+  }
+
+  .l-content-wrap {
+    max-width: 100%;
+    padding-right: 5% !important;
+    padding-left: 5% !important;
+    box-sizing: border-box !important;
+
+    &-default {
+      max-width: 100%;
+      padding-right: 5% !important;
+      padding-left: 5% !important;
+      box-sizing: border-box !important;
+    }
+  }
+
+  .l-spinner {
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .l-col2 {
+    flex-wrap: wrap;
+
+    &__list {
+      width: 100%;
+    }
+    
+    &__list:not(:first-child) {
+      margin-top: 30px;
+    }    
+  }
+
+  .l-col3 {
+    flex-wrap: wrap;
+
+    &__list {
+      width: 100%;
+    }
+    
+    &__list:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  .p-hamburger {
+    right: 2%;
+  }
+
+  .c-title {
+    font-size: 6vw;
+    margin-bottom: 40px;
+  }
+}
+
+@media print {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 16px;
+  }
+
+  .c-title {
+    font-size: 24px;
+  }
 }
