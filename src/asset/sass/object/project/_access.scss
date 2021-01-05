@@ -1,2 +1,90 @@
 .p-access {
+    margin-top: 80px;
+    padding-bottom: 150px;
+
+    &__mv {
+        width: 100%;
+        height: 60vh;
+        background-image: url(/asset/image/access_01.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &__inner {
+        padding-top: 75px;
+    }
+
+    &__imgWrap {
+        margin-bottom: 50px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        img {
+            width: 24%;
+
+            &:nth-of-type(n + 5) {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    &__text {
+        margin-bottom: 80px;
+        text-align: center;
+    }
 }
+
+iframe {
+    width: 100%;
+}
+
+// レスポンシブ対応
+@media screen and (min-width: 1001px) {
+    .c-title {
+        font-size: 24px;
+    }
+}
+  
+@media screen and (max-width: 1000px) {  
+    .c-title {
+        font-size: 3vw;
+        margin-bottom: 50px;
+    }
+  
+    .p-access {
+        padding-bottom: 80px;
+    }
+}
+  
+@media screen and (max-width: 576px) {
+    .c-title {
+        font-size: 6vw;
+        margin-bottom: 40px;
+    }
+  
+    .p-access {
+        padding-bottom: 75px;
+        &__inner {
+            padding-top: 50px;
+        }
+    
+        &__imgWrap {
+            margin-bottom: 25px;
+        }
+    
+        &__text {
+            margin-bottom: 40px;
+        }
+    }
+}
+  
+@media print { 
+    .c-title {
+      font-size: 24px;
+    }
+}
+  
+
