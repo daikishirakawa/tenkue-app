@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+/* ==================================
+  ヘッダー
+===================================== */
+
 .l-header {
   width: 100%;
   height: 80px;
@@ -27,6 +31,26 @@
     img {
       width: auto;
       height: 100%;
+    }
+  }
+}
+
+.l-global-nav {
+  &-item {
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  &-link {
+    padding: 0.2em 1em;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    position: relative;
+    display: block;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba(155, 155, 155, 0.2);
     }
   }
 }
@@ -88,8 +112,8 @@
 
       &::before,
       &::after {
-      top: 0;
-      background-color: #fff;
+        top: 0;
+        background-color: #fff;
       }
       &::before {
         width: 20px;
@@ -118,6 +142,14 @@
   margin: -1px;
 }
 
+.is-drawerActive {
+  .l-global-nav {
+    visibility: visible;
+    border-radius: 0;
+  }
+  overflow-y: hidden;
+}
+
 .js-nav-cover {
   position: fixed;
   top: 0;
@@ -134,87 +166,8 @@
   transition: all 0.3s cubic-bezier(0.52, 0, 0.5, 1.8);
 }
 
-.is-drawerActive {
-  .l-global-nav {
-    visibility: visible;
-    border-radius: 0;
-  }
-  overflow-y: hidden;
-}
-
-.l-global-nav {
-  &-item {
-    list-style: none;
-    text-transform: uppercase;
-  }
-
-  &-link {
-    padding: 0.2em 1em;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    position: relative;
-    display: block;
-    transition: 0.3s;
-
-    &:hover {
-      background-color: rgba(155, 155, 155, 0.2);
-    }
-  }
-}
-
-.c-title {
-  margin-bottom: 60px;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  font-size: 24px;
-
-  &:after {
-    content: "";
-    width: 40px;
-    height: 2px;
-    background-color: #00478b;
-    border-radius: 1px;
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
-  }
-}
-
-
-
-// PC幅 (1001px)より大きい画面の場合
+/* screen(ディスプレイ) : 1001px以上 */
 @media screen and (min-width: 1001px) {
-  h1 {
-    font-size: 48px;
-  }
-
-  h2 {
-    font-size: 32px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  a {
-    font-size: 16px;
-  }
- 
-  .p-hamburger {
-    display: none;
-  }
-
-  .js-nav-cover {
-    display: none;
-  }
-
   .l-global-nav {
     &-box {
       display: flex;
@@ -226,41 +179,17 @@
     }
   }
 
-  .c-title {
-    font-size: 24px;
+  .p-hamburger {
+    display: none;
   }
 
+  .js-nav-cover {
+    display: none;
+  }
 }
-// タブレット幅・スマホ幅 (1000px以下)画面の場合
+
+/* screen(ディスプレイ) : 576px以上 - 1000px以下 */
 @media screen and (max-width: 1000px) {
-  .u-pc {
-    display: none !important;
-  }
-
-  .u-tab {
-    display: block;
-  }
-
-  h1 {
-    font-size: 6vw;
-  }
-
-  h2 {
-    font-size: 4vw;
-  }
-
-  h3 {
-    font-size: 3vw;
-  }
-
-  p {
-    font-size: 2vw;
-  }
-
-  a {
-    font-size: 2vw;
-  }
-
   .l-content-wrap {
     max-width: 100%;
     padding-right: 3% !important;
@@ -275,14 +204,6 @@
     }
   }
 
-  .p-hamburger {
-    display: block;
-  }
-
-  .js-nav-cover {
-    display: block;
-  }
-
   .l-global-nav {
     position: fixed;
     top: 0;
@@ -295,10 +216,6 @@
     background: transparent;
     transition: all 0.5s cubic-bezier(0.52, 0, 0.5, 1.8);
     z-index: 9;
-  }
-
-  .is-hidden {
-    visibility: hidden;
   }
 
   .l-container {
@@ -319,40 +236,29 @@
 
     &-link {
       color: #fff;
+      font-size: 2vw;
     }
   }
 
-  .c-title {
-    font-size: 3vw;
-    margin-bottom: 50px;
+  .p-hamburger {
+    display: block;
+  }
+
+  .u-tab {
+    display: block;
+  }
+
+  .js-nav-cover {
+    display: block;
+  }
+
+  .is-hidden {
+    visibility: hidden;
   }
 }
 
+/* screen(ディスプレイ) : 576px以下 */
 @media screen and (max-width: 576px) {
-  .u-sp {
-    display: block !important;
-  }
-
-  h1 {
-    font-size: 12vw;
-  }
-
-  h2 {
-    font-size: 8vw;
-  }
-
-  h3 {
-    font-size: 6vw;
-  }
-
-  p {
-    font-size: 4vw;
-  }
-
-  a {
-    font-size: 4vw;
-  }
-
   .l-content-wrap {
     max-width: 100%;
     padding-right: 5% !important;
@@ -367,67 +273,13 @@
     }
   }
 
-  .l-spinner {
-    width: 85%;
-    margin: 0 auto;
-  }
-
-  .l-col2 {
-    flex-wrap: wrap;
-
-    &__list {
-      width: 100%;
-    }
-    
-    &__list:not(:first-child) {
-      margin-top: 30px;
-    }    
-  }
-
-  .l-col3 {
-    flex-wrap: wrap;
-
-    &__list {
-      width: 100%;
-    }
-    
-    &__list:not(:first-child) {
-      margin-top: 30px;
+  .l-global-nav {
+    &-link {
+      font-size: 4vw;
     }
   }
 
   .p-hamburger {
     right: 2%;
-  }
-
-  .c-title {
-    font-size: 6vw;
-    margin-bottom: 40px;
-  }
-}
-
-@media print {
-  h1 {
-    font-size: 48px;
-  }
-
-  h2 {
-    font-size: 32px;
-  }
-
-  h3 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  a {
-    font-size: 16px;
-  }
-
-  .c-title {
-    font-size: 24px;
   }
 }
