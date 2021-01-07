@@ -1,7 +1,7 @@
 const body = document.querySelector('body');
 const globalNav = document.querySelector('#global_nav');
 const jsNavCover = document.querySelector('.js-nav-cover');
-const lglobalnavitem = document.querySelectorAll('.l-global_nav_item');
+const lglobalnavitem = document.querySelectorAll('.l-global-nav-item');
 const jsButtonHamburger = document.getElementById('js-buttonHamburger');
 
 jsButtonHamburger.addEventListener('click', () => {
@@ -9,11 +9,27 @@ jsButtonHamburger.addEventListener('click', () => {
     const isDrawerActive = document.querySelector('body').classList.contains('is-drawerActive')
 
     if (isDrawerActive) {
-        closeHamburger();
-    } else {
         openHamburger();
+        lockScroll();
+    } else {
+        closeHamburger();
+        unlockScroll();
     }
 });
+
+function preventControl(event) {
+    event.preventDefault();
+}
+
+function lockScroll() {
+    document.addEventListener("mousewheel", preventControl, { passive: false });
+    document.addEventListener("touchmove", preventControl, { passive: false });
+}
+
+function unlockScroll() {
+    document.removeEventListener("mousewheel", preventControl, { passive: false });
+    document.removeEventListener('touchmove', preventControl, { passive: false });
+}
 
 function closeHamburger () {
     globalNav.classList.add('is-hidden');
