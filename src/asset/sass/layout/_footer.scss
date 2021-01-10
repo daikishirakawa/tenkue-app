@@ -1,2 +1,60 @@
-.l-footer {
-}
+// 601pxからこの装飾を適用する
+@media(min-width: 601px){
+    .l-footer {
+        background-color: rgb(41, 74, 134);
+        color: white;
+        height: 250px;
+        h3 {
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+        .adress{
+            padding: 10px;
+            float: left;
+            text-align: left;
+        }
+        .nav {
+            display: flex;
+            list-style: none;
+        }
+        .menu {
+            margin: 1%;
+            margin-left: 5%;
+            font-size: 1rem;
+        }
+        #end {
+            padding-top: 100px;
+            text-align: center;
+        }
+    }
+    }
+    @media(max-width: 600px){
+    .l-footer {
+        background-color: rgb(41, 74, 134);
+        color: white;
+        height: 450px;
+        font-size: 1.5rem;
+        h3 {
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        .adress{
+            padding-left: 10px;
+            text-align: left;
+        }
+        .nav {
+            list-style: none;
+            column-count: 2;
+            padding-left: 10px;
+        }
+        .menu {
+            margin: 15px;
+            margin-left: 5%;
+        }
+        #end {
+            text-align: center;
+            padding-top: 10px;
+            font-size: 1.5rem;
+        }
+    }
+    }
