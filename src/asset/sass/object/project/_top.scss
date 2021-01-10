@@ -2,7 +2,8 @@
 
 .p-top {
 }
-@media(min-width: 581px){
+// 601pxからこの装飾を適用する
+@media(min-width: 601px){
 body {
     overflow-x: hidden;
 }
@@ -26,9 +27,6 @@ body {
         line-height: 40px;
     }
 }
-// .mainImage {
-//     height: 500px;
-// }
 
 .areaguide {
 
@@ -113,7 +111,6 @@ body {
 }
 .adress {
     margin: 10px;
-    margin-bottom: 200px;
     text-align: center;
     h2{
         padding: 40px ;
@@ -128,8 +125,8 @@ body {
     }
 }
 }
-
-@media(max-width: 580px){
+// 600pxまではこの装飾を適用する
+@media(max-width: 600px){
     body {
         overflow-x: hidden;
     }
@@ -153,10 +150,7 @@ body {
             line-height: 40px;
         }
     }
-    // .mainImage {
-    //     height: 500px;
-    
-    // }
+
     
     .areaguide {
     
@@ -199,7 +193,9 @@ body {
         }
        
     }
-    
+    .room-btn {
+        text-align: center;
+    }
     .room {
 
         h2 {
@@ -207,15 +203,11 @@ body {
         }
         .btn {
             width: 80%;
-            padding: 15px 100px;
             text-align: center;
+            padding: 15px 100px;
             background-color: rgb(41, 74, 134);
             color: white;
-            margin: 0 auto;
-            margin-bottom: 100px;
-        }
-        .button {
-            text-align: center;
+            margin: 30px auto;
         }
     }
     .rooms {
@@ -237,7 +229,6 @@ body {
     }
     .adress {
         margin: 10px;
-        margin-bottom: 200px;
         text-align: center;
         h2{
             padding: 40px ;
@@ -248,10 +239,8 @@ body {
             padding: 15px 100px;
             background-color: rgb(41, 74, 134);
             color: white;
-            margin: 80px auto;
+            margin: 30px auto;
         }
     }
-    .fadeout{
-        opacity: 0;
-    }
+  
 }
