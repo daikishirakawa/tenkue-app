@@ -1,7 +1,7 @@
-article{
+.p-faq{
   padding: 150px 0;
 
-  .title{
+  &__title{
       margin-bottom: 50px;
       padding: 0.2em 1em;
       color: $color-light;
@@ -14,7 +14,7 @@ article{
       }
   }
 
-  dl:not(:last-child) {
+  &__list:not(:last-child) {
       margin-bottom: 30px;
 
       @include sp-layout() {
@@ -22,7 +22,7 @@ article{
       }
   }
 
-  .question {
+  &__question {
       padding: 0.5em 2em 0.5em 3em;
       border-bottom: 2px solid rgb(229,236,243);
       position: relative;
@@ -62,7 +62,7 @@ article{
       }
   }
 
-  .answer {
+  &__answer {
       height: 0;
       overflow: hidden;
       padding: 0 2em 0 4.5em;
