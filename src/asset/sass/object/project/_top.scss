@@ -1,10 +1,9 @@
 
-
-.p-top {
-}
 // 601pxからこの装飾を適用する
 @media(min-width: 601px){
 body {
+    margin-left: auto;
+    margin-right: auto;
     overflow-x: hidden;
 }
 .swiper-wrapper .swiper-slide {
@@ -17,6 +16,9 @@ body {
     backface-visibility: hidden;
 }
 .concept {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     h2 {
         text-align: center;
         padding: 70px;
@@ -29,6 +31,9 @@ body {
 }
 
 .areaguide {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 
     h2 {
         text-align: center;
@@ -53,15 +58,20 @@ body {
         height: 400px;
 
     }
-    .images {
-        margin-left: 44px;
+    .images ul {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+
+    
     }
     .map-image {
         float: left;
         height: 10px;
-        width: 22%;
+        width: 20%;
         list-style: none;
-        padding: 10px 5px;
     }
     .btn {
         width: 300px;
@@ -75,6 +85,9 @@ body {
 }
 
 .room {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     h2 {
         text-align: center;
         padding: 60px 0 0 30px;
@@ -87,6 +100,12 @@ body {
         color: white;
         margin: 0 auto;
         margin-bottom: 100px;
+    }
+    h3 {
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
+
     }
 }
 .rooms {
@@ -102,12 +121,19 @@ body {
     background-image: url("map.jpg");
     height: 30px;
 }
+.main-access {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+
+}
 .access iframe{
     box-sizing: border-box;
     width: 50%;
     height: 300px;
     margin: 10px;
     float: left;
+
 }
 .adress {
     margin: 10px;
@@ -150,10 +176,8 @@ body {
             line-height: 40px;
         }
     }
-
-    
     .areaguide {
-    
+        
         h2 {
             text-align: center;
             padding: 70px;
@@ -215,8 +239,6 @@ body {
         margin: 50px 10px;
     
     }
-    
-    
     .map {
         background-image: url("map.jpg");
         height: 30px;
