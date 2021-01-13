@@ -1,12 +1,5 @@
 .p-room {
-  padding-bottom: 60px;
-  // @include tab-layout() {
-  //   padding-bottom: 80px;
-  // }
-
-  // @include sp-layout() {
-  //     padding-bottom: 75px;
-  // }
+  padding-bottom: 80px;
   
   &__main-pic {
     width: 100%;
@@ -88,7 +81,6 @@
   &__num {
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
-    // font-size: 30px;
     font-weight: bold;
     @include font-size(32);
   }
@@ -99,10 +91,23 @@
 
   &__text {
     margin-bottom: 1rem;
+
+    @include tab-layout {
+     @include font-size(15.5);
+    }
+  
+    @include sp-layout {
+      @include font-size(15);
+    }
   }
 
   &__bottom-img {
-    width: 47.5%;
+    width: 50%;
     margin-bottom: 3rem;
+
+    @include sp-layout {
+      width: 100%;
+      margin-bottom: 1.8rem;
+    }
   }
 }
