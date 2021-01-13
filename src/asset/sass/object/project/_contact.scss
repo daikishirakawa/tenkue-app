@@ -84,9 +84,7 @@
   position: relative;
   font-size: 24px;
 }
-h2 {
-  font-size: 32px;
-}
+
 .c-title:after {
   content: "";
   width: 40px;
@@ -97,14 +95,6 @@ h2 {
   left: 50%;
   bottom: -5px;
   transform: translateX(-50%);
-}
-
-h3 {
-  font-size: 24px;
-}
-
-p {
-  font-size: 16px;
 }
 
 form {
@@ -224,16 +214,7 @@ select {
     margin-bottom: 40px;
     font-size: 6vw;
   }
-  h2 {
-    font-size: 8vw;
-  }
 
-  p {
-    font-size: 4vw;
-  }
-  h3 {
-    font-size: 6vw;
-  }
 }
 
 @media screen and(max-width:1000px) {
@@ -266,16 +247,7 @@ select {
   .c-title {
     font-size: 3vw;
   }
-  h2 {
-    font-size: 4vw;
-  }
-
-  h3 {
-    font-size: 3vw;
-  }
-  p {
-    font-size: 2vw;
-  }
+ 
 }
 
 @media screen and (min-width: 1001px) {
