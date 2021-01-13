@@ -108,9 +108,7 @@
     padding-right: 2.4% !important;
     padding-left: 2.4% !important;
 }
-img {
-    width: 100%;
-}
+
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
@@ -246,23 +244,11 @@ body.is-modal-hidden {
         margin-bottom: 40px;
         font-size: 6vw;
     }
-    h2 {
-        font-size: 8vw;
-        font-size: 4vw;
-    }
-    p {
-        font-size: 4vw;
-    }
-
-    h3 {
-        font-size: 6vw;
-    }
+ 
     .p-modal__inner {
         width: 95%;
     }
-    a {
-        font-size: 4vw;
-    }
+    
 }
 
 @media screen and(max-width:1000px) {
@@ -285,17 +271,7 @@ body.is-modal-hidden {
         margin-bottom: 50px;
         font-size: 3vw;
     }
-    p {
-        font-size: 2vw;
-    }
-
-    h3 {
-        font-size: 3vw;
-    }
-
-    a {
-        font-size: 2vw;
-    }
+   
     .p-modal__closeButton {
         right: 3%;
     }
