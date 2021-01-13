@@ -1,60 +1,72 @@
 // 601pxからこの装飾を適用する
 @media(min-width: 601px){
-    .l-footer {
+    body {
         background-color: rgb(41, 74, 134);
-        color: white;
-        height: 250px;
+        width: 100%;
+
+    }
+    .l-footer {
+            color: white;
+            flex-wrap: nowrap;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+    }
         h3 {
-            padding-left: 20px;
-            padding-top: 20px;
+            padding: 20px;
+            width: 50%;
+            
         }
-        .adress{
-            padding: 10px;
+        .c-adress{
+            padding: 0 20px;
             float: left;
             text-align: left;
+            width: 50%;
+
+
         }
-        .nav {
+        .p-nav {
             display: flex;
             list-style: none;
+            padding: 0 20px;
+            font-size: 1.5vw;
+            .p-nav__menu {
+                margin: 10px;
+            }
         }
-        .menu {
-            margin: 1%;
-            margin-left: 5%;
-            font-size: 1rem;
-        }
-        #end {
+        #c-end {
             padding-top: 100px;
             text-align: center;
         }
     }
-    }
+    // 600px以下ではこの装飾を適用する
     @media(max-width: 600px){
     .l-footer {
         background-color: rgb(41, 74, 134);
         color: white;
-        height: 450px;
-        font-size: 1.5rem;
+        height: 400px;
         h3 {
             padding-top: 20px;
-            padding-left: 20px;
+            margin-left: 1em;
+    
         }
-        .adress{
-            padding-left: 10px;
+        .c-adress{
             text-align: left;
+            margin-left: 1em;
         }
-        .nav {
+        .p-nav {
             list-style: none;
             column-count: 2;
             padding-left: 10px;
+            .p-nav__menu {
+                margin: 15px;
+                margin-left: 5%;
+                font-size: 1.3rem;
+            }
         }
-        .menu {
-            margin: 15px;
-            margin-left: 5%;
-        }
-        #end {
+        #c-end {
             text-align: center;
             padding-top: 10px;
-            font-size: 1.5rem;
         }
     }
     }
