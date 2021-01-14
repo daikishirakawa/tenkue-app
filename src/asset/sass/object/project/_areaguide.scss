@@ -114,6 +114,7 @@ a:-webkit-any-link {
     cursor: pointer;
     text-decoration: underline;
 }
+
 // モーダル//
 .p-modal {
     width: 100%;
@@ -145,15 +146,16 @@ a:-webkit-any-link {
         position: relative;
         z-index: 101;
 
-        @include sp-layout() {
-            width: 95%;
+        &__inner a {
+            color: #222;
+            text-decoration: none;
+            font-size: 16px;
         }
-
-        h4 {
+        &__inner h4 {
             margin-bottom: 15px;
         }
 
-        img {
+        &__inner img {
             margin-bottom: 15px;
         }
 
@@ -173,10 +175,6 @@ a:-webkit-any-link {
         border: none;
         outline: none;
         cursor: pointer;
-
-        @include tab-layout() {
-            right: 3%;
-        }
     }
 
     &__cover {
@@ -187,21 +185,16 @@ a:-webkit-any-link {
         right: 0;
         bottom: 0;
         left: 0;
-        background-color: rgba($color-default, 0.8);
+        background-color: rgba(34, 34, 34, 0.8);
         z-index: 100;
     }
 }
-
-body.is-modal-hidden {
-    overflow: hidden;
-}
-
+ 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
 // レスポンシブ//
 @media screen and(max-width:576px) {
     .p-areaguide {
@@ -244,11 +237,10 @@ body.is-modal-hidden {
         margin-bottom: 40px;
         font-size: 6vw;
     }
- 
+
     .p-modal__inner {
         width: 95%;
     }
-    
 }
 
 @media screen and(max-width:1000px) {
@@ -271,7 +263,7 @@ body.is-modal-hidden {
         margin-bottom: 50px;
         font-size: 3vw;
     }
-   
+
     .p-modal__closeButton {
         right: 3%;
     }
