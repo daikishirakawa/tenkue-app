@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ja">
 
-<head>	
-    <%- include('../_includes/_common.ejs') %>
-    <title>Tenkue Hotel</title>
+<head>
+	<%- include('../_includes/_common.ejs') %>
+	<title>Tenkue Hotel</title>
 </head>
 
 </html>
 
-<body class="is-modal-hidden">
-    <%- include('../_includes/_header') %>
-    <main>
-        <article class="p-areaguide">
+<body>
+	<%- include('../_includes/_header') %>
+	<main>
+		<article class="p-areaguide">
 			<div class="p-areaguide__mv"></div>
 			<div class="p-areaguide__inner l-content-wrap-default">
 				<h2 class="c-title">area guide</h2>
@@ -24,27 +24,40 @@
 					<div class="l-col3__list">
 						<img src="/asset/image/access_04.jpg" alt="">
 						<h4>大阪駅</h4>
-						<button class="p-areaguide__detailButton js-modal-opener">詳しくみる</button>
+						<button class="p-areaguide__detailButton js-modal-open" id="openModal">詳しくみる</button>
 					</div>
-					<div class="p-modal js-modal-element">
-						<div class="p-modal__inner">
+					
+					<!-- モーダルエリアここから -->
+					<section id="modalArea" class="modalArea">
+						<div id="modalBg" class="modalBg"></div>
+						<div class="modalWrapper">
 							<h4 class="">大阪城</h4>
 							<img src="/asset/image/access_02.jpg" alt="">
 							<p> 大阪城には天守閣をはじめ、街を一望できる展望台や西の丸庭園、大阪城ホール、弓道場などの施設があります。梅や桜の名所としても知られ、他にもツツジなど、折々の花を楽しむことができます。 </p>
 							<p>
-								<a href="https://www.jr-odekake.net/eki/top?id=0610130" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-								<a href="https://www.jr-odekake.net/eki/top?id=0610130" target="_blank" rel="noopener noreferrer">https://www.jr-odekake.net/eki/top?id=0610130</a>
+								<a href="https://www.jr-odekake.net/eki/top?id=0610130" target="_blank"
+									rel="noopener noreferrer">【公式サイトのこちら】</a><br>
+								<a href="https://www.jr-odekake.net/eki/top?id=0610130" target="_blank"
+									rel="noopener noreferrer">https://www.jr-odekake.net/eki/top?id=0610130</a>
 							</p>
-							<button class="p-modal__closeButton js-modal-closer">
+							<button class="p-modal__closeButton js-modal-closer" id="closeModal">
 								<img src="/asset/image/icon_close.svg" alt="閉じる">
 							</button>
+						</div>
+
+					</section>
+					<!-- モーダルエリアここまで -->
+					<div class="p-modal js-modal-element">
+						<div class="p-modal__inner">
+
+
 						</div>
 						<div class="p-modal__cover js-modal-cover"></div>
 					</div>
 					<div class="l-col3__list">
 						<img src="/asset/image/access_07.jpg" alt="">
 						<h4>スカイビル</h4>
-						<button class="p-areaguide__detailButton js-modal-opener">詳しくみる</button>
+						<button class="p-areaguide__detailButton js-modal-open">詳しくみる</button>
 					</div>
 					<div class="p-modal js-modal-element">
 						<div class="p-modal__inner">
@@ -53,7 +66,8 @@
 							<p> 大阪城には天守閣をはじめ、街を一望できる展望台や西の丸庭園、大阪城ホール、弓道場などの施設があります。梅や桜の名所としても知られ、他にもツツジなど、折々の花を楽しむことができます。 </p>
 							<p>
 								<a href="https://www.skybldg.co.jp/" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-								<a href="https://www.skybldg.co.jp/" target="_blank" rel="noopener noreferrer">https://www.skybldg.co.jp/</a>
+								<a href="https://www.skybldg.co.jp/" target="_blank"
+									rel="noopener noreferrer">https://www.skybldg.co.jp/</a>
 							</p>
 							<button class="p-modal__closeButton js-modal-closer">
 								<img src="/asset/image/icon_close.svg" alt="閉じる">
@@ -64,7 +78,7 @@
 					<div class="l-col3__list">
 						<img src="/asset/image/access_02.jpg" alt="">
 						<h4>大阪城</h4>
-						<button class="p-areaguide__detailButton js-modal-opener">詳しくみる</button>
+						<button class="p-areaguide__detailButton js-modal-open" id="openModal">詳しくみる</button>
 					</div>
 					<div class="p-modal js-modal-element">
 						<div class="p-modal__inner">
@@ -73,7 +87,8 @@
 							<p> 大阪城には天守閣をはじめ、街を一望できる展望台や西の丸庭園、大阪城ホール、弓道場などの施設があります。梅や桜の名所としても知られ、他にもツツジなど、折々の花を楽しむことができます。 </p>
 							<p>
 								<a href="https://www.osakacastle.net/" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-								<a href="https://www.osakacastle.net/" target="_blank" rel="noopener noreferrer">https://www.osakacastle.net/</a>
+								<a href="https://www.osakacastle.net/" target="_blank"
+									rel="noopener noreferrer">https://www.osakacastle.net/</a>
 							</p>
 							<button class="p-modal__closeButton js-modal-closer">
 								<img src="/asset/image/icon_close.svg" alt="閉じる">
@@ -89,16 +104,18 @@
 						<h4>心斎橋商店街</h4>
 						<p>
 						</p>
-						<button class="p-areaguide__detailButton js-modal-opener">詳しくみる</button>
+						<button class="p-areaguide__detailButton js-modal-open" id="openModal">詳しくみる</button>
 					</div>
 					<div class="p-modal js-modal-element">
 						<div class="p-modal__inner">
 							<h4 class="">心斎橋商店街</h4>
 							<img src="/asset/image/access_05.jpg" alt="">
-							<p> なんばから心斎橋までの一駅区間と長く続く商店街でショッピングを楽しめます。「戎橋・心斎橋商店街」約370mは、 なんば駅の高島屋の近くから始まり、そして中間地点にグリコの看板で有名な戎橋があり、「心斎橋商店街」約580mが心斎橋駅まで続いていきます。休日はかなりの混雑で賑わいを見せています。 </p>
+							<p> なんばから心斎橋までの一駅区間と長く続く商店街でショッピングを楽しめます。「戎橋・心斎橋商店街」約370mは、
+								なんば駅の高島屋の近くから始まり、そして中間地点にグリコの看板で有名な戎橋があり、「心斎橋商店街」約580mが心斎橋駅まで続いていきます。休日はかなりの混雑で賑わいを見せています。 </p>
 							<p>
 								<a href="https://www.shinsaibashi.or.jp/" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-								<a href="https://www.shinsaibashi.or.jp/" target="_blank" rel="noopener noreferrer">https://www.jr-odekake.net/eki/top?id=0610130</a>
+								<a href="https://www.shinsaibashi.or.jp/" target="_blank"
+									rel="noopener noreferrer">https://www.jr-odekake.net/eki/top?id=0610130</a>
 							</p>
 							<button class="p-modal__closeButton js-modal-closer">
 								<img src="/asset/image/icon_close.svg" alt="閉じる">
@@ -109,7 +126,7 @@
 					<div class="l-col3__list">
 						<img src="/asset/image/access_03.jpg" alt="">
 						<h4>ユニバーサル・スタジオ・ジャパン</h4>
-						<button class="p-areaguide__detailButton js-modal-opener">詳しくみる</button>
+						<button class="p-areaguide__detailButton js-modal-open" id="openModal">詳しくみる</button>
 					</div>
 					<div class="p-modal js-modal-element">
 						<div class="p-modal__inner">
@@ -118,7 +135,8 @@
 							<p> ハリウッドの映画をテーマにしたテーマパークです。興奮のライドや人気キャラクターたちのショーなど、子どもから大人まで楽しめ、ワールドクラスのエンターテイメントに出会えるパークです。 </p>
 							<p>
 								<a href="https://www.usj.co.jp/web/ja/jp" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-								<a href="https://www.usj.co.jp/web/ja/jp" target="_blank" rel="noopener noreferrer">https://www.usj.co.jp/web/ja/jp</a>
+								<a href="https://www.usj.co.jp/web/ja/jp" target="_blank"
+									rel="noopener noreferrer">https://www.usj.co.jp/web/ja/jp</a>
 							</p>
 							<button class="p-modal__closeButton js-modal-closer">
 								<img src="/asset/image/icon_close.svg" alt="閉じる">
@@ -131,16 +149,18 @@
 						<h4>吉野家</h4>
 						<p>
 						</p>
-						<button class="p-areaguide__detailButton js-modal-opener">詳しくみる</button>
+						<button class="p-areaguide__detailButton js-modal-open" id="openModal">詳しくみる</button>
 					</div>
 					<div class="p-modal js-modal-element">
 						<div class="p-modal__inner">
 							<h4 class="">吉野家</h4>
 							<img src="/asset/image/access_08.jpg" alt="">
-							<p> 吉野家は、牛丼を主力商品とする、大手外食チェーンストア。 株式会社吉野家ホールディングスの子会社・株式会社吉野家が、同店の運営企業である。日本国における牛丼チェーン店舗数では2008年9月末以降、すき家に次いで第2位である。 </p>
+							<p> 吉野家は、牛丼を主力商品とする、大手外食チェーンストア。
+								株式会社吉野家ホールディングスの子会社・株式会社吉野家が、同店の運営企業である。日本国における牛丼チェーン店舗数では2008年9月末以降、すき家に次いで第2位である。 </p>
 							<p>
 								<a href="https://www.yoshinoya.com/" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-								<a href="https://www.yoshinoya.com/" target="_blank" rel="noopener noreferrer">https://www.yoshinoya.com/</a>
+								<a href="https://www.yoshinoya.com/" target="_blank"
+									rel="noopener noreferrer">https://www.yoshinoya.com/</a>
 							</p>
 							<button class="p-modal__closeButton js-modal-closer">
 								<img src="/asset/image/icon_close.svg" alt="閉じる">
@@ -150,11 +170,13 @@
 					</div>
 				</div>
 			</div>
-		</article> 
-    </main>
 
-    <%- include('../_includes/_footer.ejs') %>
-    <script src="/asset/js/modal.js"></script>
+
+		</article>
+	</main>
+
+	<%- include('../_includes/_footer.ejs') %>
+	<script src="/asset/js/modal.js"></script>
 </body>
 
 </html>

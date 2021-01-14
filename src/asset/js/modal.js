@@ -1,40 +1,42 @@
-document.addEventListener("DOMContentLoaded", (function() {
-  ht(),
-  function() {
-      for (var t = document.querySelector("body"), n = document.querySelectorAll(".js-modal-element"), r = document.querySelectorAll(".js-modal-opener"), e = function(e) {
-          r[e].addEventListener("click", (function() {
-              n[e].classList.add("is-show"),
-              t.classList.add("is-modal-hidden")
-          }
-          ))
-      }, i = 0; i < r.length; i++)
-          e(i);
-      for (var o = document.querySelectorAll(".js-modal-closer"), u = document.querySelectorAll(".js-modal-cover"), c = function(r) {
-          o[r].addEventListener("click", (function() {
-              n[r].classList.remove("is-show"),
-              t.classList.remove("is-modal-hidden")
-          }
-          ))
-      }, a = 0; a < o.length; a++)
-          c(a);
-      for (var s = function(r) {
-          u[r].addEventListener("click", (function() {
-              n[r].classList.remove("is-show"),
-              t.classList.remove("is-modal-hidden")
-          }
-          ))
-      }, f = 0; f < u.length; f++)
-          s(f)
-  }(),
-  function() {
-      for (var t = document.querySelectorAll(".js-accordion-trigger"), n = document.querySelectorAll(".js-accordion-element"), r = function(r) {
-          t[r].addEventListener("click", (function() {
-              t[r].classList.toggle("is-active"),
-              n[r].classList.toggle("is-active")
-          }
-          ))
-      }, e = 0; e < t.length; e++)
-          r(e)
-  }()
-}
-))
+$(function () {
+  const modalArea = $('#modalArea');
+  $('#openModal').on('click',function(){
+    modalArea.fadeIn();
+    bodyScrollPrevent(true);
+  });
+  $('#closeModal , #modalBg').on('click',function(){
+    modalArea.fadeOut(function(){
+      bodyScrollPrevent(false);
+    });
+  });
+  
+  function bodyScrollPrevent(flag){
+    let scrollPosition;
+    const body = document.getElementsByTagName('body')[0];
+    const ua = window.navigator.userAgent.toLowerCase();
+    const isiOS = ua.indexOf('iphone') > -1 || ua.indexOf('ipad') > -1 || ua.indexOf('macintosh') > -1 && 'ontouchend' in document;
+    const scrollBarWidth = window.innerWidth - document.body.clientWidth;
+    if(flag){
+      body.style.paddingRight = scrollBarWidth + 'px';
+      if(isiOS){
+        scrollPosition = -window.pageYOffset;
+        body.style.position = 'fixed';
+        body.style.width = '100%';
+        body.style.top = scrollPosition + 'px';
+      } else {
+        body.style.overflow = 'hidden';
+      }
+    } else if(!flag) {
+      body.style.paddingRight = '';
+      if(isiOS){
+        scrollPosition = parseInt(body.style.top.replace(/[^0-9]/g,''));
+        body.style.position = '';
+        body.style.width = '';
+        body.style.top = '';
+        window.scrollTo(0, scrollPosition);
+      }else {
+        body.style.overflow = '';
+      }
+    }
+  }
+});

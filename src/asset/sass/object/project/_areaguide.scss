@@ -1,3 +1,40 @@
+/* モーダルCSS */
+.modalArea {
+    display: none;
+    position: fixed;
+    z-index: 10; /*サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+  
+  .modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 70%;
+    max-width: 800px;
+    height: 650px;
+    overflow-y: auto;
+    padding: 10px 30px;
+    background-color: #fff;
+  }
+  
+
+
+  
+  
+  /* 以下ボタンスタイル */
+
+
 .p-areaguide {
     margin-top: 80px;
     padding-bottom: 150px;
@@ -145,23 +182,18 @@ a:-webkit-any-link {
         background-color: $color-light;
         position: relative;
         z-index: 101;
+    }
+    &__inner a {
+        color: #222;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    &__inner h4 {
+        margin-bottom: 15px;
+    }
 
-        &__inner a {
-            color: #222;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        &__inner h4 {
-            margin-bottom: 15px;
-        }
-
-        &__inner img {
-            margin-bottom: 15px;
-        }
-
-        p:not(:first-child) {
-            margin-bottom: 15px;
-        }
+    &__inner img {
+        margin-bottom: 15px;
     }
 
     &__closeButton {
@@ -189,12 +221,7 @@ a:-webkit-any-link {
         z-index: 100;
     }
 }
- 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+
 // レスポンシブ//
 @media screen and(max-width:576px) {
     .p-areaguide {
