@@ -160,7 +160,15 @@ exports.build = gulp.series(
     gulp.parallel(ejsCompile, sassCompile, imageMin, js),
 );
 
-// npm run bundleを叩いた時に、JSのバンドルを実行
+// npm run devを叩いた時に、JSのバンドルを実行（開発モード/bundle.jsをminifyしない）
+exports.dev = gulp.series(
+    clean,
+    gulp.parallel(ejsCompile, sassCompile, imageMin, bundle),
+    sync,
+    watchFile
+);
+
+// npm run bundleを叩いた時に、JSのバンドルを実行（本番モード/bundle.jsをminify）
 exports.bundle = gulp.series(
     clean,
     gulp.parallel(ejsCompile, sassCompile, imageMin, bundle),

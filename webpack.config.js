@@ -1,5 +1,8 @@
+// 環境変数をを設定することにより、開発モードと本番モードの切り替えができます。
+const env = process.env.NODE_ENV || 'development';
+
 module.exports = {
-  mode: "development",
+  mode: env,
   
   devServer: {
     contentBase: "dist",
