@@ -22,6 +22,10 @@ const mode = require("gulp-mode")({
     default: "development",
     verbose: false,
 });
+// 追加パッケージ (バンドルするために)
+const webpackStream = require('webpack-stream');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
 
 var paths = {
     srcDir: './src',
@@ -137,6 +141,12 @@ function watchFile(done) {
     done();
 }
 
+// バンドル用タスク
+function bundle() {
+    return webpackStream(webpackConfig, webpack)
+        .pipe(gulp.dest('./dist/asset/js'));
+}
+
 // タスクの実行
 exports.default = gulp.series(
     clean,
@@ -148,4 +158,12 @@ exports.default = gulp.series(
 exports.build = gulp.series(
     clean,
     gulp.parallel(ejsCompile, sassCompile, imageMin, js),
+);
+
+// npm run bundleを叩いた時に、JSのバンドルを実行
+exports.bundle = gulp.series(
+    clean,
+    gulp.parallel(ejsCompile, sassCompile, imageMin, bundle),
+    // 動作確認用に、一旦ブラウザも立ちあげ
+    sync,
 );

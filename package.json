@@ -10,6 +10,9 @@
         "node-sass": "^4.14.1"
     },
     "devDependencies": {
+        "@babel/core": "^7.12.10",
+        "@babel/preset-env": "^7.12.11",
+        "babel-loader": "^8.2.2",
         "browser-sync": "^2.26.10",
         "ejs": "^3.0.2",
         "eslint": "^6.8.0",
@@ -35,11 +38,14 @@
         "imagemin-pngquant": "^8.0.0",
         "nodemon": "^1.19.4",
         "rimraf": "^3.0.2",
-        "terser": "^4.6.3"
+        "terser": "^4.6.3",
+        "webpack": "^5.15.0",
+        "webpack-stream": "^6.1.1"
     },
     "scripts": {
         "start": "npx gulp",
-        "build": "NODE_ENV=production npx gulp build --production"
+        "build": "NODE_ENV=production npx gulp build --production",
+        "bundle": "NODE_ENV=production npx gulp bundle --production"
     },
     "author": "",
     "license": "ISC",
