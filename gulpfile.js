@@ -26,6 +26,9 @@ const mode = require("gulp-mode")({
 const webpackStream = require('webpack-stream');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
+// 
+const eslint = require('gulp-eslint');
+// const eslint = require('babel-eslint');
 
 var paths = {
     srcDir: './src',
@@ -147,6 +150,15 @@ function bundle() {
         .pipe(gulp.dest('./dist/asset/js'));
 }
 
+// リンター(ESLint)用のタスク設定
+function lint () {
+    return gulp
+        .src(['./src/asset/js/*.js'])
+        .pipe(eslint({ useEslintrc: true })) // .eslintrc を参照
+        .pipe(eslint.format())
+        .pipe(eslint.failAfterError());
+}
+
 // タスクの実行
 exports.default = gulp.series(
     clean,
@@ -166,4 +178,9 @@ exports.bundle = gulp.series(
     gulp.parallel(ejsCompile, sassCompile, imageMin, bundle),
     // 動作確認用に、一旦ブラウザも立ちあげ
     sync,
+);
+
+// npm run eslintを叩いた時
+exports.lint = gulp.series(
+    lint
 );

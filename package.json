@@ -12,6 +12,7 @@
     "devDependencies": {
         "@babel/core": "^7.12.10",
         "@babel/preset-env": "^7.12.11",
+        "babel-eslint": "^10.1.0",
         "babel-loader": "^8.2.2",
         "browser-sync": "^2.26.10",
         "ejs": "^3.0.2",
@@ -23,6 +24,7 @@
         "gulp-clean-css": "^4.3.0",
         "gulp-cli": "^2.2.0",
         "gulp-ejs": "^5.0.0",
+        "gulp-eslint": "^6.0.0",
         "gulp-group-css-media-queries": "^1.2.2",
         "gulp-imagemin": "^6.2.0",
         "gulp-mode": "^1.0.2",
@@ -45,7 +47,8 @@
     "scripts": {
         "start": "npx gulp",
         "build": "NODE_ENV=production npx gulp build --production",
-        "bundle": "NODE_ENV=production npx gulp bundle --production"
+        "bundle": "NODE_ENV=production npx gulp bundle --production",
+        "eslint": "npx gulp lint"
     },
     "author": "",
     "license": "ISC",
