@@ -1,44 +1,6 @@
-/* モーダルCSS */
-.modalArea {
-    display: none;
-    position: fixed;
-    z-index: 10; /*サイトによってここの数値は調整 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .modalBg {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(30,30,30,0.9);
-  }
-  
-  .modalWrapper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform:translate(-50%,-50%);
-    width: 70%;
-    max-width: 800px;
-    height: 650px;
-    overflow-y: auto;
-    padding: 10px 30px;
-    background-color: #fff;
-  }
-  
-
-
-  
-  
-  /* 以下ボタンスタイル */
-
-
 .p-areaguide {
     margin-top: 80px;
     padding-bottom: 150px;
-
     &__mv {
         width: 100%;
         height: 60vh;
@@ -67,39 +29,7 @@
         text-align: center;
         font-size: 18px;
     }
-    &__subtitle {
-        margin-bottom: 30px;
-        text-align: center;
-        font-size: 18px;
-    }
-    &__detailButton {
-        margin: 0 auto;
-        padding: 0.7em 3em;
-        display: block;
-        outline: none;
-        color: #fff;
-        background-color: #00478b;
-        cursor: pointer;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border: none;
-        position: relative;
-        font-size: 14px;
-    }
-    &__detailButton::after {
-        content: "";
-        width: 0.8em;
-        height: 0.8em;
-        position: absolute;
-        top: 48%;
-        right: 3%;
-        transform: translateY(-50%);
-        background-image: url(/asset/image/icon_arrow_right.svg);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  
 }
 
 .c-title {
@@ -109,18 +39,6 @@
     letter-spacing: 2px;
     position: relative;
     font-size: 24px;
-
-    &:after {
-        content: "";
-        width: 40px;
-        height: 2px;
-        background-color: #00478b;
-        border-radius: 1px;
-        position: absolute;
-        left: 50%;
-        bottom: -5px;
-        transform: translateX(-50%);
-    }
 }
 
 .l-col3 {
@@ -130,7 +48,6 @@
 
     & h4 {
         margin-bottom: 10px;
-        text-align: center;
     }
     &__list {
         width: 30%;
@@ -146,87 +63,10 @@
     padding-left: 2.4% !important;
 }
 
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-// モーダル//
-.p-modal {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s;
-
-    &.is-show {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.3s;
-        overflow: scroll;
-        z-index: 100;
-    }
-
-    &__inner {
-        width: 80%;
-        max-width: 800px;
-        height: auto;
-        margin: 10vh auto;
-        padding: 30px 3%;
-        background-color: $color-light;
-        position: relative;
-        z-index: 101;
-    }
-    &__inner a {
-        color: #222;
-        text-decoration: none;
-        font-size: 16px;
-    }
-    &__inner h4 {
-        margin-bottom: 15px;
-    }
-
-    &__inner img {
-        margin-bottom: 15px;
-    }
-
-    &__closeButton {
-        width: 20px;
-        height: 20px;
-        padding: 0;
-        position: absolute;
-        top: 20px;
-        right: 1.5%;
-        background: transparent;
-        border: none;
-        outline: none;
-        cursor: pointer;
-    }
-
-    &__cover {
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(34, 34, 34, 0.8);
-        z-index: 100;
-    }
-}
-
 // レスポンシブ//
 @media screen and(max-width:576px) {
     .p-areaguide {
         padding-bottom: 75px;
-
         &__inner {
             padding-top: 50px;
         }
@@ -240,18 +80,11 @@ a:-webkit-any-link {
             margin-bottom: 20px;
             font-size: 4.5vw;
         }
-        &__detailButton {
-            font-size: 3.5vw;
-        }
     }
     .l-col3 {
         flex-wrap: wrap;
-
         &__list {
             width: 100%;
-        }
-        &__list:not(:first-child) {
-            margin-top: 30px;
         }
     }
     .l-content-wrap-default {
@@ -264,7 +97,6 @@ a:-webkit-any-link {
         margin-bottom: 40px;
         font-size: 6vw;
     }
-
     .p-modal__inner {
         width: 95%;
     }
@@ -272,14 +104,10 @@ a:-webkit-any-link {
 
 @media screen and(max-width:1000px) {
     .p-areaguide {
-        &__detailButton {
-            font-size: 1.75vw;
-        }
         &__subtitle {
             font-size: 2.25vw;
         }
     }
-
     .l-content-wrap-default {
         max-width: 100%;
         padding-right: 3% !important;
@@ -289,9 +117,5 @@ a:-webkit-any-link {
     .c-title {
         margin-bottom: 50px;
         font-size: 3vw;
-    }
-
-    .p-modal__closeButton {
-        right: 3%;
     }
 }
