@@ -2,190 +2,64 @@
 <html lang="ja">
 
 <head>
-    <%- include('../_includes/_common.ejs') %>
-    <title>Tenkue Hotel</title>
+	<%- include('../_includes/_common.ejs') %>
+	<title>Tenkue Hotel</title>
 </head>
 
 </html>
 
 <body>
-    <%- include('../_includes/_header') %>
-    <main>
-        <article class="p-areaguide">
-            <div class="p-areaguide_img"></div>
-            <div class="p-areaguide_warapper">
-                <h2 class="p-areaguide_title">AREA GUIDE</h2>
-                <h3 class="p-areaguide_subtitle">大阪を代表する観光名所や京都の見どころをご紹介。<br>ぜひ大阪観光の計画にお役立てください。</h3>
-                <p class="p-areaguide_text">
-                    ホテル周辺や、京都観光の人気スポットをご紹介します。<br> 梅田・難波・心斎橋周辺などをお楽しみください。
-                </p>
-                <h2 class="p-areaguide_title">AREA MAP</h2>
-                <img src="../../asset//image//areaguide_02.png" alt class="p-areaguide_map">
+	<%- include('../_includes/_header') %>
+	<main>
+		<article class="p-areaguide">
+			<div class="p-areaguide__mv"></div>
+			<div class="p-areaguide__inner l-content-wrap-default">
+				<h2 class="c-title">area guide</h2>
+				<h3 class="p-areaguide__subtitle"> 大阪を代表する観光名所や京都の見どころをご紹介。<br> ぜひ大阪観光の計画にお役立てください。 </h3>
+				<p class="p-areaguide__text"> ホテル周辺や、京都観光の人気スポットをご紹介します。<br> 梅田・難波・心斎橋周辺などをお楽しみください。 </p>
+				<h2 class="c-title">area map</h2>
+				<img src="/asset/image/areaguide_02.png" alt="" class="p-areaguide__map">
+				<h3 class="p-areaguide__subtitle">大阪・梅田周辺</h3>
+				<div class="l-col3">
+					<div class="l-col3__list">
+						<img src="/asset/image/access_04.jpg" alt="">
+						<h4>大阪駅</h4>
+						<p> 大阪の中心地で、駅エリアにはノースゲートビルディング、サウスゲートビルディングに入る大丸梅田店、エキマルシェ大阪、ALBi(アルビ)、セントラルコートなどに450店舗以上の個性的なショップやレストラン・カフェ160店舗以上が集結した、まったく新しい、近代的な駅に生まれ変わり、歩くだけでも楽しいスポットです。 </p>
+					</div>
+					<div class="l-col3__list">
+						<img src="/asset/image/access_07.jpg" alt="">
+						<h4>スカイビル</h4>
+						<p> イギリスの有名情報誌が2008年に選出した「世界の建築トップ20」にランクインした梅田スカイビル高さ173mの連結高層ビルの最上階の展望台です。オフィスをはじめショールームやイベントホール、レストラン、ショップに映画館などを備えた複合ビルです。 </p>
+					</div>
+					<div class="l-col3__list">
+						<img src="/asset/image/access_02.jpg" alt="">
+						<h4>大阪城</h4>
+						<p> 大阪城には天守閣をはじめ、街を一望できる展望台や西の丸庭園、大阪城ホール、弓道場などの施設があります。梅や桜の名所としても知られ、他にもツツジなど、折々の花を楽しむことができます。 </p>
+					</div>
+				</div>
+				<h3 class="p-areaguide__subtitle">難波・心斎橋周辺</h3>
+				<div class="l-col3">
+					<div class="l-col3__list">
+						<img src="/asset/image/access_05.jpg" alt="">
+						<h4>心斎橋商店街</h4>
+						<p> なんばから心斎橋までの一駅区間と長く続く商店街でショッピングを楽しめます。「戎橋・心斎橋商店街」約370mは、 なんば駅の高島屋の近くから始まり、そして中間地点にグリコの看板で有名な戎橋があり、「心斎橋商店街」約580mが心斎橋駅まで続いていきます。休日はかなりの混雑で賑わいを見せています。 </p>
+					</div>
+					<div class="l-col3__list">
+						<img src="/asset/image/access_03.jpg" alt="">
+						<h4>ユニバーサル・スタジオ・ジャパン</h4>
+						<p> ハリウッドの映画をテーマにしたテーマパークです。興奮のライドや人気キャラクターたちのショーなど、子どもから大人まで楽しめ、ワールドクラスのエンターテイメントに出会えるパークです。 </p>
+					</div>
+					<div class="l-col3__list">
+						<img src="/asset/image/access_08.jpg" alt="">
+						<h4>吉野家</h4>
+						<p> 吉野家は、牛丼を主力商品とする、大手外食チェーンストア。 株式会社吉野家ホールディングスの子会社・株式会社吉野家が、同店の運営企業である。日本国における牛丼チェーン店舗数では2008年9月末以降、すき家に次いで第2位である。 </p>
+					</div>
+				</div>
+			</div>
+		</article>
+	</main>
 
-                <!-- １段目モーダル -->
-                <h3 class="p-areaguide_subtitle">大阪・梅田周辺</h3>
-                <div class="modal_lists">
-                    <!-- 大阪駅 -->
-                    <div class="list">
-                        <img src="../../asset/image/access_04.jpg" alt="大阪駅" class="img">
-                        <h4 class="text">大阪駅</h4>
-                        <!-- モーダルエリアここから -->
-                        <div class="btn-wrap">
-                            <a href="#" class="btn modal-open" data-modal-open="modal-1">詳しく見る</a>
-                        </div>
-                        <div class="modal" data-modal="modal-1">
-                            <div class="modal-cover"></div>
-                             <div class="modal-inner">
-                                <div class="modal-content">
-                                    <h4>大阪城</h4>
-                                    <img src="../../asset/image/access_02.jpg" alt="大阪城">
-                                    <p>大阪城には天守閣をはじめ、街を一望できる展望台や西の丸庭園、大阪城ホール、弓道場などの施設があります。梅や桜の名所としても知られ、他にもツツジなど、折々の花を楽しむことができます。
-                                    </p>
-                                    <p>
-                                        <a href="https://www.jr-odekake.net/eki/top?id=0610130" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-                                        <a href="https://www.jr-odekake.net/eki/top?id=0610130" target="_blank" rel="noopener noreferrer">https://www.jr-odekake.net/eki/top?id=0610130</a>
-                                    </p>
-                                        <img src="../../asset//image//icon_close.svg"alt="" class="closeModal">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- スカイビル -->
-                    <div class="list">
-                        <img src="../../asset/image/access_07.jpg" alt="スカイビル" class="img">
-                        <h4 class="text">スカイビル</h4>
-                        <!-- モーダルエリアここから -->
-                        <div class="btn-wrap">
-                            <a href="#" class="btn modal-open" data-modal-open="modal-2">詳しく見る</a>
-                        </div>
-                        <div class="modal" data-modal="modal-2">
-                            <div class="modal-cover"></div>
-                            <div class="modal-inner">
-                                <div class="modal-content">
-                                    <h4>大阪城</h4>
-                                    <img src="../../asset/image/access_02.jpg" alt="大阪城">
-                                    <p>大阪城には天守閣をはじめ、街を一望できる展望台や西の丸庭園、大阪城ホール、弓道場などの施設があります。梅や桜の名所としても知られ、他にもツツジなど、折々の花を楽しむことができます。
-                                    </p>
-                                    <p>
-                                        <a href="https://www.skybldg.co.jp/" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-                                        <a href="https://www.skybldg.co.jp/" target="_blank" rel="noopener noreferrer">https://www.skybldg.co.jp/</a>
-                                    </p>
-                                    <img src="../../asset//image//icon_close.svg"alt="" class="closeModal">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 大阪城 -->
-                    <div class="list">
-                        <img src="../../asset/image/access_02.jpg" alt="大阪城" class="img">
-                        <h4 class="text">大阪城</h4>
-                        <!-- モーダルエリアここから -->
-                        <div class="btn-wrap">
-                            <a href="#" class="btn modal-open" data-modal-open="modal-3">詳しく見る</a>
-                        </div>
-                        <div class="modal" data-modal="modal-3">
-                            <div class="modal-cover"></div>
-                            <div class="modal-inner">
-                                <div class="modal-content">
-                                    <h4>大阪城</h4>
-                                    <img src="../../asset/image/access_02.jpg" alt="大阪城">
-                                    <p>大阪城には天守閣をはじめ、街を一望できる展望台や西の丸庭園、大阪城ホール、弓道場などの施設があります。梅や桜の名所としても知られ、他にもツツジなど、折々の花を楽しむことができます。
-                                    </p>
-                                    <p>
-                                        <a href="https://www.osakacastle.net/" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-                                        <a href="https://www.osakacastle.net/" target="_blank" rel="noopener noreferrer">https://www.osakacastle.net/</a>
-                                    </p>
-                                    <img src="../../asset//image//icon_close.svg"alt="" class="closeModal">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- ２段目モーダル -->
-                <h3 class="p-areaguide_subtitle">難波・心斎橋周辺</h3>
-                <div class="modal_lists">
-                    <!-- 心斎橋商店街 -->
-                    <div class="list">
-                        <img src="../../asset/image/access_05.jpg" alt="心斎橋商店街" class="img">
-                        <h4 class="text">心斎橋商店街</h4>
-                        <!-- モーダルエリアここから -->
-                        <div class="btn-wrap">
-                            <a href="#" class="btn modal-open" data-modal-open="modal-4">詳しく見る</a>
-                        </div>
-                        <div class="modal" data-modal="modal-4">
-                            <div class="modal-cover"></div>
-                            <div class="modal-inner">
-                                <div class="modal-content">
-                                    <h4>心斎橋商店街</h4>
-                                    <img src="../../asset/image/access_05.jpg" alt="">
-                                    <p>なんばから心斎橋までの一駅区間と長く続く商店街でショッピングを楽しめます。「戎橋・心斎橋商店街」約370mは、 なんば駅の高島屋の近くから始まり、そして中間地点にグリコの看板で有名な戎橋があり、「心斎橋商店街」約580mが心斎橋駅まで続いていきます。休日はかなりの混雑で賑わいを見せています
-                                    </p>
-                                    <p>
-                                        <a href="https://www.shinsaibashi.or.jp/" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-                                        <a href="https://www.shinsaibashi.or.jp/" target="_blank" rel="noopener noreferrer">https://www.jr-odekake.net/eki/top?id=0610130</a>
-                                    </p>
-                                    <img src="../../asset//image//icon_close.svg"alt="" class="closeModal">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- ユニバーサル・スタジオ・ジャパン -->
-                    <div class="list">
-                        <img src="../../asset/image/access_03.jpg" alt="ユニバーサル・スタジオ・ジャパン" class="img">
-                        <h4 class="text">ユニバーサル・スタジオ・ジャパン</h4>
-                        <!-- モーダルエリアここから -->
-                        <div class="btn-wrap">
-                            <a href="#" class="btn modal-open" data-modal-open="modal-5">詳しく見る</a>
-                        </div>
-                        <div class="modal" data-modal="modal-5">
-                            <div class="modal-cover"></div>
-                            <div class="modal-inner">
-                                <div class="modal-content">
-                                    <h4>ユニバーサル・スタジオ・ジャパン</h4>
-                                    <img src="../../asset/image/access_03.jpg" alt="">
-                                    <p>ハリウッドの映画をテーマにしたテーマパークです。興奮のライドや人気キャラクターたちのショーなど、子どもから大人まで楽しめ、ワールドクラスのエンターテイメントに出会えるパークです。
-                                    </p>
-                                    <p>
-                                        <a href="https://www.usj.co.jp/web/ja/jp" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-                                        <a href="https://www.usj.co.jp/web/ja/jp" target="_blank" rel="noopener noreferrer">https://www.usj.co.jp/web/ja/jp</a>
-                                    </p>
-                                    <img src="../../asset//image//icon_close.svg"alt="" class="closeModal">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 吉野家 -->
-                    <div class="list">
-                        <img src="../../asset/image/access_08.jpg" alt="吉野家" class="img">
-                        <h4 class="text">吉野家</h4>
-                        <!-- モーダルエリアここから -->
-                        <div class="btn-wrap">
-                            <a href="#" class="btn modal-open" data-modal-open="modal-6">詳しく見る</a>
-                        </div>
-                        <div class="modal" data-modal="modal-6">
-                            <div class="modal-cover"></div>
-                            <div class="modal-inner">
-                                <div class="modal-content">
-                                    <h4>吉野家</h4>
-                                    <img src="../../asset/image/access_08.jpg" alt="吉野家">
-                                    <p>吉野家は、牛丼を主力商品とする、大手外食チェーンストア。 株式会社吉野家ホールディングスの子会社・株式会社吉野家が、同店の運営企業である。日本国における牛丼チェーン店舗数では2008年9月末以降、すき家に次いで第2位である。
-                                    </p>
-                                    <p>
-                                        <a href="https://www.yoshinoya.com/" target="_blank" rel="noopener noreferrer">【公式サイトのこちら】</a><br>
-                                        <a href="https://www.yoshinoya.com/" target="_blank" rel="noopener noreferrer">https://www.yoshinoya.com/</a>
-                                    </p>
-                                    <img src="../../asset//image//icon_close.svg"alt="" class="closeModal">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-    </main>
-
-    <%- include('../_includes/_footer.ejs') %>
-    <script src="/asset/js/modal.js"></script>
+	<%- include('../_includes/_footer.ejs') %>
 </body>
 
 </html>
