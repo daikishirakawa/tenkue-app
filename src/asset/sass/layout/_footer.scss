@@ -1,29 +1,25 @@
 // 601pxからこの装飾を適用する
 @media(min-width: 601px){
-    body {
-        background-color: rgb(41, 74, 134);
-        width: 100%;
 
+    .p-footer {
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
     }
     .l-footer {
             color: white;
             flex-wrap: nowrap;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            background-color: rgb(41, 74, 134);
     }
         h3 {
             padding: 20px;
             width: 50%;
-            
         }
         .c-adress{
             padding: 0 20px;
             float: left;
             text-align: left;
             width: 50%;
-
-
         }
         .p-nav {
             display: flex;
