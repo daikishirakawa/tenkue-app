@@ -1,2 +1,74 @@
-.l-footer {
-}
+// 601pxからこの装飾を適用する
+@media(min-width: 601px){
+
+    .p-footer {
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .l-footer {
+            color: white;
+            flex-wrap: nowrap;
+            background-color: rgb(41, 74, 134);
+            a {
+                color: white;
+            }
+    }
+        h3 {
+            padding: 20px;
+            width: 50%;
+        }
+        .c-adress{
+            padding: 0 20px;
+            float: left;
+            text-align: left;
+            width: 50%;
+        }
+        .p-nav {
+            display: flex;
+            list-style: none;
+            padding: 0 20px;
+            font-size: 1.5vw;
+            .p-nav__menu {
+                margin: 10px;
+            }
+        }
+        #c-end {
+            padding-top: 100px;
+            text-align: center;
+        }
+    }
+    // 600px以下ではこの装飾を適用する
+    @media(max-width: 600px){
+    .l-footer {
+        background-color: rgb(41, 74, 134);
+        color: white;
+        height: 400px;
+        a {
+            color: white;
+        }
+        h3 {
+            padding-top: 20px;
+            margin-left: 1em;
+    
+        }
+        .c-adress{
+            text-align: left;
+            margin-left: 1em;
+        }
+        .p-nav {
+            list-style: none;
+            column-count: 2;
+            padding-left: 10px;
+            .p-nav__menu {
+                margin: 15px;
+                margin-left: 5%;
+                font-size: 1.3rem;
+            }
+        }
+        #c-end {
+            text-align: center;
+            padding-top: 10px;
+        }
+    }
+    }
