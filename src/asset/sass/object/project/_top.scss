@@ -1,2 +1,309 @@
+
+// 601pxからこの装飾を適用する
+@media(min-width: 601px){
 .p-top {
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+.swiper-wrapper .swiper-slide {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;  //全画面表示
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.c-concept {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    &__h2 {
+        text-align: center;
+        padding: 70px;
+    }
+    &__paragraph{  
+        margin: 0 20px;
+        text-align: center;
+        line-height: 40px;
+    }
+}
+
+.c-areaguide {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__h2 {
+        text-align: center;
+        padding: 70px;
+    }
+    &__paragraph{
+        text-align: center;
+        line-height: 40px;
+    }
+    &__map{
+        float: left;
+        padding: 10px;
+        height: 350px;
+        width: 50%;
+        box-sizing: border-box;
+    }
+    &__wrapper {
+        float: left;
+        box-sizing: border-box;
+        text-align: center;
+        width: 50%;
+        height: 400px;
+    }
+    &__images ul {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__map-image {
+        float: left;
+        height: 10px;
+        width: 20%;
+        list-style: none;
+    }
+    &__btn {
+        width: 300px;
+        margin-top: 20%;
+        padding: 15px 100px;
+        background-color: rgb(41, 74, 134);
+        font-size: 1em;
+        color: white;
+        text-align: center;
+        border-color: rgb(41, 74, 134);
+        font-family: serif;
+        font-size: 1em;
+    }  
+}
+
+.c-rooms {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    &__h2 {
+        text-align: center;
+        padding: 60px 0 0 30px;
+    }
+    &__btn {
+        display: flex;
+        width: 300px;
+        padding: 15px 100px;
+        background-color: rgb(41, 74, 134);
+        color: white;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        border-color: rgb(41, 74, 134);
+        font-family: serif;
+        font-size: 1em;
+
+    }
+    &__room__h3 {
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
+        font-size: 1.3em;
+    }
+    &__room {
+        box-sizing: border-box;
+        width: 30%;
+        float: left;
+        margin: 50px 10px;
+    }
+}
+.c-rooms {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    &__h2 {
+        text-align: center;
+        padding: 60px 0 0 30px;
+    }
+    &__btn {
+        display: flex;
+        width: 300px;
+        padding: 15px 100px;
+        background-color: rgb(41, 74, 134);
+        color: white;
+        margin: 0 auto;
+        margin-bottom: 100px;
+        border-color: rgb(41, 74, 134);
+        font-family: serif;
+        font-size: 1em;
+
+    }
+    &__room__h3 {
+        margin-left: 0;
+        padding-left: 0;
+        width: 100%;
+        font-size: 1.3em;
+    }
+    &__room {
+        box-sizing: border-box;
+        width: 30%;
+        float: left;
+        margin: 50px 10px;
+    }
+}
+
+.c-access {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+
+    &__map{
+        background-image: url("map.jpg");
+        height: 30px;
+        &__iframe{
+            box-sizing: border-box;
+            width: 50%;
+            height: 300px;
+            margin: 10px;
+            float: left;
+        }
+    }
+    &__adress {
+        margin: 10px;
+        text-align: center;
+        &__h2{
+            padding: 40px ;
+        }
+        &__btn {
+            display: flex;
+            width: 300px;
+            padding: 15px 100px;
+            background-color: rgb(41, 74, 134);
+            color: white;
+            margin: 50px auto;
+            border-color: rgb(41, 74, 134);
+            font-family: serif;
+            font-size: 1em;
+        }
+    }
+}
+}
+// 600pxまではこの装飾を適用する
+@media(max-width: 600px){
+    .p-top {
+        overflow-x: hidden;
+    }
+    .swiper-wrapper .swiper-slide {
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;  //全画面表示
+        overflow: hidden;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .c-concept {
+        &__h2 {
+            text-align: center;
+            padding: 70px;
+        }
+        &__paragraph{  
+            margin: 0 20px;
+            text-align: center;
+            line-height: 40px;
+        }
+    }
+    .c-areaguide {
+        &__h2 {
+            text-align: center;
+            padding: 70px;
+        }
+        &__paragraph{
+            text-align: center;
+            line-height: 40px;
+            font-size: 1.2em;
+            padding-top: 20px;
+        }
+        &__map{
+            padding: 10px;
+            height: 350px;
+            box-sizing: border-box;
+        }
+        &__wrapper {
+            box-sizing: border-box;
+            text-align: center;
+            height: 400px;
+        }
+        &__images {
+            margin-left: 44px;
+        }
+        &__map-image {
+            float: left;
+            height: 10px;
+            width: 22%;
+            list-style: none;
+            padding: 10px 5px;
+        }
+        &__btn {
+            width: 80%;
+            margin-top: 20%;
+            padding: 15px 100px;
+            background-color: rgb(41, 74, 134);
+            color: white;
+            text-align: center;
+            border-color: rgb(41, 74, 134);
+        }
+    }
+    .c-rooms {
+
+        &__h2 {
+            text-align: center;
+        }
+        &__btn {
+            width: 80%;
+            text-align: center;
+            padding: 15px 100px;
+            background-color: rgb(41, 74, 134);
+            color: white;
+            margin: 30px auto;
+             border-color: rgb(41, 74, 134);
+        }
+        &__btns {
+            text-align: center;
+        }
+        &__room {
+            box-sizing: border-box;
+            margin: 50px 10px;
+        
+        }
+    }
+    .c-access {
+        &__adress {
+            margin: 10px;
+            text-align: center;
+            &__h2{
+                padding: 40px ;
+            }
+            &__btn {
+                width: 80%;
+                text-align: center;
+                padding: 15px 100px;
+                background-color: rgb(41, 74, 134);
+                color: white;
+                margin: 30px auto;
+                border-color: rgb(41, 74, 134);
+             }
+            }
+           &__map {
+            background-image: url("map.jpg");
+            height: 300px;
+            &__iframe{
+                box-sizing: border-box;
+                height: 300px;
+                padding: 10px;
+                width: 100%;
+            }
+        }
+    }
 }
