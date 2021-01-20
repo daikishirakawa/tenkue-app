@@ -1,4 +1,4 @@
-# README（共同開発）
+# TENKUE HOTEL
 
 ## デモ
 - Top page
@@ -19,7 +19,6 @@
 共同開発での開発フロー、コミュニケーションの取り方、ツールの使い方を体験すること
 
 ## 成果物
-TENKUE HOTEL 
 サンプル→ [TENKUE HOTEL](https://tenkue-hotel.takanori-portfolio.com/)
 
 
@@ -34,7 +33,7 @@ TENKUE HOTEL
 
 ## 起動方法
  
- 1. `git clone (https://github.com/daikishirakawa/tenkue-app.git)`
+ 1. `git clone https://github.com/daikishirakawa/tenkue-app.git`
  1. `cd tenkue-app`
  1. `npm install`
  1. `npm run start`
