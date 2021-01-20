@@ -37,7 +37,7 @@ Sample→ [TENKUE HOTEL](https://tenkue-hotel.takanori-portfolio.com/)
 
  1. `git clone (https://github.com/daikishirakawa/tenkue-app.git)`
 
- 1. `cd tenkue_hotel_lp`
+ 1. `cd tenkue-app`
  
  1. `npm run start`
 
