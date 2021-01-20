@@ -39,7 +39,7 @@ Sample→ [TENKUE HOTEL](https://tenkue-hotel.takanori-portfolio.com/)
 
  1. `cd tenkue_hotel_lp`
  
- 1. `npm start`
+ 1. `npm run start`
 
 
 ## Author
