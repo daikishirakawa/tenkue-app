@@ -22,7 +22,7 @@
 サンプル→ [TENKUE HOTEL](https://tenkue-hotel.takanori-portfolio.com/)
 
 
-## 環境/技術
+## 環境/技術
 - EJS
 - Sass
 - JavaScript または jQuery
